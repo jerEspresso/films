@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 563" width="1000" height="563" role="img" aria-label="Image placeholder">
+  <rect width="1000" height="563" fill="#E5D5A8"/>
+  <rect x="24" y="24" width="952" height="515" fill="none" stroke="#C9A86C" stroke-width="3"/>
+  <rect x="38" y="38" width="924" height="487" fill="none" stroke="#C9A86C" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="500,176 509.2,212.8 546,222 509.2,231.2 500,268 490.8,231.2 454,222 490.8,212.8" fill="#B5852A"/>
+  <text x="500" y="332" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" letter-spacing="3" fill="#6B5B40">ADD YOUR IMAGE</text>
+  <text x="500" y="374" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-style="italic" fill="#8C7A55">replace the src with your own film still</text>
+</svg>
