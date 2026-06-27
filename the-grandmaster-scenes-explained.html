@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Grandmaster — The Scenes Explained (Spoilers)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F3E8CC;
+    --cream-dark: #E5D5A8;
+    --ink: #1E160A;
+    --ink-mid: #3A2E1E;
+    --ink-light: #6B5B40;
+    --red: #8C1B2B;
+    --gold: #B5852A;
+    --gold-light: #D4AA5C;
+    --rule: #C9A86C;
+  }
+
+  @media print {
+    body { background: white; color: #111; }
+    .page-break { page-break-before: always; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, serif;
+    font-size: 16.5px;
+    line-height: 1.78;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 5rem;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    border-bottom: 2px solid var(--red);
+    margin-bottom: 0.5rem;
+  }
+
+  .header-eyebrow {
+    font-family: 'Lora', serif;
+    font-size: 11.5px;
+    font-style: italic;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.1rem;
+  }
+
+  .header-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.08;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .header-subtitle {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-light);
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.03em;
+  }
+
+  .header-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--gold);
+    font-size: 18px;
+    margin-top: 1.5rem;
+  }
+  .header-rule::before,
+  .header-rule::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 80px;
+    background: var(--rule);
+  }
+
+  .seal {
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--red);
+  }
+
+  /* ── INTRO NOTE ── */
+  .intro-note {
+    background: var(--cream-dark);
+    border-left: 3.5px solid var(--red);
+    padding: 1.2rem 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--ink-mid);
+    font-size: 0.97rem;
+    line-height: 1.7;
+  }
+
+  .intro-note strong {
+    font-style: normal;
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    margin-top: 3rem;
+  }
+
+  .section-label {
+    font-family: 'Lora', serif;
+    font-size: 10.5px;
+    font-style: italic;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.22;
+    margin-bottom: 1.15rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section p {
+    margin-bottom: 0.9rem;
+    color: var(--ink-mid);
+  }
+
+  .section p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── SUBSECTION ── */
+  .subsection {
+    margin-top: 1.8rem;
+  }
+
+  .subsection-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    border: 1px solid var(--rule);
+    padding: 1.2rem 1.4rem;
+    margin: 1.5rem 0;
+    background: rgba(181, 133, 42, 0.07);
+  }
+
+  .callout-label {
+    font-family: 'Lora', serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout p {
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+    margin-bottom: 0.6rem;
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* ── STYLE CARDS ── */
+  .style-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  @media (max-width: 620px) {
+    .style-grid { grid-template-columns: 1fr; }
+  }
+
+  .style-card {
+    border: 1px solid var(--rule);
+    padding: 1rem 1.1rem;
+    background: var(--cream-dark);
+  }
+
+  .style-card-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .style-card-chinese {
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  .style-card-who {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+    font-family: 'Lora', serif;
+    font-style: italic;
+  }
+
+  .style-card p {
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* ── CHARACTER LIST ── */
+  .character {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5rem 1.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--cream-dark);
+    align-items: start;
+  }
+
+  .character:last-child { border-bottom: none; }
+
+  .character-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 0.97rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .character-actor {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  .character-desc {
+    font-size: 0.93rem;
+    color: var(--ink-mid);
+    line-height: 1.65;
+  }
+
+  /* ── WATCH FOR LIST ── */
+  .watch-list {
+    list-style: none;
+    margin-top: 0.8rem;
+  }
+
+  .watch-list li {
+    padding: 0.6rem 0 0.6rem 1.4rem;
+    border-bottom: 1px solid var(--cream-dark);
+    color: var(--ink-mid);
+    font-size: 0.95rem;
+    position: relative;
+    line-height: 1.65;
+  }
+
+  .watch-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  .watch-list li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ── TIMELINE BAR ── */
+  .timeline {
+    margin: 1.5rem 0;
+    border-left: 2px solid var(--red);
+    padding-left: 1.4rem;
+  }
+
+  .timeline-event {
+    margin-bottom: 1.1rem;
+    position: relative;
+  }
+
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -1.73rem;
+    top: 0.55rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+  }
+
+  .timeline-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--red);
+    letter-spacing: 0.05em;
+  }
+
+  .timeline-desc {
+    font-size: 0.92rem;
+    color: var(--ink-mid);
+    line-height: 1.62;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin: 2.5rem 0;
+    letter-spacing: 0.4em;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-mid);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--red);
+    text-align: center;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--ink-light);
+    line-height: 1.65;
+  }
+
+  em.cn {
+    font-style: normal;
+    color: var(--gold);
+    font-size: 0.92em;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <p class="header-eyebrow">A Cultural Companion · Volume Two · Scene Explained</p>
+  <h1 class="header-title">The Grandmaster</h1>
+  <p class="header-subtitle">一代宗師 &nbsp;·&nbsp; Yi Dai Zong Shi</p>
+  <p style="font-size:0.88rem; color:var(--ink-light); letter-spacing:0.05em;">Directed by Wong Kar-wai &nbsp;·&nbsp; 2013</p>
+  <div class="header-rule">
+    <span class="seal">✦</span>
+  </div>
+</header>
+
+<p class="intro-note">
+  <strong>Spoilers ahead:</strong> This companion volume unpacks specific scenes, reveals what becomes of each character, and gathers the film's key lines of dialogue. It is meant to be read alongside the film, or after it — or after the spoiler-free <em>Background Guide</em> — whenever you want a scene's meaning drawn out. If you have not watched yet and would like to stay unspoiled, begin with the <em>Background Guide</em> instead and return here once the lights come up.
+</p>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-label">Part One</p>
+  <h2 class="section-title">The Opening of the Film, Explained</h2>
+
+  <p>The early scenes are a ritual of jianghu politics. Gong Yutian travels south to Foshan with his chosen heir Ma San, announcing his retirement and seeking to pass the torch to a Southern successor — something symbolically enormous, acknowledging that the future of Chinese martial arts must bridge both worlds. Various Southern masters challenge the Northern delegation, but all are defeated by Ma San fighting on Gong Yutian's behalf. The Southern masters then select Ip Man as their candidate. The tests Ip Man faces before reaching Gong Yutian are not mere fights; they are proof of whether he is worthy to represent the entire South in this negotiation.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-label">Part Two</p>
+  <h2 class="section-title">The Golden Pavilion — When North Met South</h2>
+
+  <p>Ip Man's encounter with Gong Yutian does not end as a fight. The two men trade philosophical ideas over a flat cake — Gong Yutian dares Ip Man to break it, using it as a metaphor for Chinese unity and the relationship between North and South. Gong Yutian concedes and symbolically passes his reputation to Ip Man.</p>
+
+  <p>Gong Er's challenge follows directly from this — her father has given away the family's standing, and she intends to reclaim it herself. Their match at the Golden Pavilion is governed by terms that are themselves a philosophical statement: whoever breaks a piece of furniture loses, because kung fu is about precision. At close quarters in the narrow stairwell, the fight reaches its most intimate moment: Gong Er strikes and, in doing so, falls naturally into Wing Chun — Ip Man's own style. He notices immediately. He smiles, briefly, then answers her with Baguazhang — her style. The exchange lasts only a moment, but it is the film's most eloquent image of what these two people are to each other: <em>英雄相惜</em> (yīng xióng xiāng xī) — the wordless recognition between great equals, kindred spirits who have truly met their match. Two traditions briefly become one; two people who can never be more than rivals share something that goes beyond rivalry entirely. Gong Er wins: Ip Man breaks a stair step when he instinctively reaches to catch her from a fall. The care he shows in that moment is what costs him the match — and it is the first sign of something more than rivalry between them.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-label">Part Three</p>
+  <h2 class="section-title">Key Characters</h2>
+
+  <div class="character">
+    <div>
+      <p class="character-name"><span style="color:var(--gold);">叶问</span> &nbsp;·&nbsp; Ip Man</p>
+      <p class="character-actor">梁朝伟 &nbsp;·&nbsp; Tony Leung Chiu-wai</p>
+    </div>
+    <p class="character-desc">The historical grandmaster of Wing Chun who would later train Bruce Lee. In the film, he is a cultured gentleman from the prosperous city of Foshan — educated, well-married, and respected. The Japanese invasion strips him of everything: his wealth, his home, his wife, his children (who starve during the occupation). He ends the film a widower teaching in a small Hong Kong school, but carrying his art forward with complete dignity. Tony Leung trained in Wing Chun for four years for this role.</p>
+  </div>
+
+  <div class="character">
+    <div>
+      <p class="character-name"><span style="color:var(--gold);">宫二</span> &nbsp;·&nbsp; Gong Er</p>
+      <p class="character-actor">章子怡 &nbsp;·&nbsp; Zhang Ziyi</p>
+    </div>
+    <p class="character-desc">The film's second protagonist — and arguably its most tragic figure. Gong Er is the daughter of the Northern grandmaster Gong Yutian. Highly skilled in Baguazhang, she was never officially designated her father's heir because of her gender. Yet when her father concedes his reputation to Ip Man — symbolically passing the family's standing to the South — it is Gong Er who steps forward to take it back. She challenges Ip Man and wins, proving herself the true heir in the one arena where gender is irrelevant: the fight itself. After her father's death at the hands of his traitorous disciple Ma San, she takes a vow of vengeance and celibacy, sacrificing her personal happiness to uphold family honour. Her arc is about what tradition demands of a woman, and what it costs.</p>
+  </div>
+
+  <div class="character">
+    <div>
+      <p class="character-name"><span style="color:var(--gold);">宫羽田</span> &nbsp;·&nbsp; Gong Yutian</p>
+      <p class="character-actor">王庆祥 &nbsp;·&nbsp; Wang Qingxiang</p>
+    </div>
+    <p class="character-desc">The grandmaster of Northern Chinese martial arts — the greatest living master at the film's opening. His journey south is both a retirement ceremony and a search for someone who can keep the tradition alive. His brief but pivotal match with Ip Man is a meeting of equals, conducted with extraordinary mutual respect. He is killed by his own disciple after the Japanese invasion.</p>
+  </div>
+
+  <div class="character">
+    <div>
+      <p class="character-name"><span style="color:var(--gold);">丁连山</span> &nbsp;·&nbsp; Ding Lianshan</p>
+      <p class="character-actor">赵本山 &nbsp;·&nbsp; Zhao Benshan</p>
+    </div>
+    <p class="character-desc">Gong Yutian's 師兄 (martial elder brother — they trained under the same master), known as "the Ghost of Guandong." He appears briefly but carries enormous weight. He introduces one of the film's sharpest distinctions: <em>面子</em> (miànzi) versus <em>里子</em> (lǐzi) — the visible face versus the hidden lining. Gong Yutian is the 面子 of the Northern martial world, its public grandmaster; Ding Lianshan is the 里子, the power that operates entirely in shadow. In 1905, he killed a Japanese ronin who was marking circles in the street and declaring them Japanese territory — and chose to spend the rest of his life as a fugitive rather than face the consequences. His exchange with Gong Yutian cuts to the core of jianghu values: asked whether it is easier to lead a school or to roam the world as a fugitive, Gong Yutian says leading a school — so Ding Lianshan chooses the harder path. The casting of Zhao Benshan, China's most celebrated comedian, is itself a signal: this unexpectedly grave performance makes the character's sacrifices land harder than any conventional dramatic actor might have.</p>
+  </div>
+
+  <div class="character">
+    <div>
+      <p class="character-name"><span style="color:var(--gold);">马三</span> &nbsp;·&nbsp; Ma San</p>
+      <p class="character-actor">张晋 &nbsp;·&nbsp; Zhang Jin</p>
+    </div>
+    <p class="character-desc">Gong Yutian's chosen heir in the North — and the film's primary villain. His betrayal of his master (collaborating with Japanese occupiers and killing Gong Yutian) is the ultimate moral transgression in this world: a disciple murdering his shifu. In jianghu terms, he is beyond redemption, which is why Gong Er's vengeance is understood by every character as not just personal but righteous.</p>
+  </div>
+
+  <div class="character">
+    <div>
+      <p class="character-name"><span style="color:var(--gold);">一线天</span> &nbsp;·&nbsp; Yixiantian "The Razor"</p>
+      <p class="character-actor">张震 &nbsp;·&nbsp; Chang Chen</p>
+    </div>
+    <p class="character-desc">A master of Bajiquan who serves as a third strand of the film's martial arts world. His story — escaping Japanese-occupied China with Gong Er's help, then reinventing himself as a barber and secret Bajiquan teacher in Hong Kong — mirrors the theme of tradition persisting in exile. His nickname "The Razor" carries double meaning: his blade-sharp fighting technique and his literal occupation.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-label">Part Four</p>
+  <h2 class="section-title">奉道 — Fèng Dào — Gong Er's Vow, The Solitary Path</h2>
+
+  <p>When Gong Er cuts her hair and takes her vow, the film gives it a specific name: <strong>奉道</strong> (fèng dào) — literally "to follow the Way." In jianghu, it means committing to a form of life most people would recognise as total sacrifice: no marriage, no disciples, no heirs. Whatever art or knowledge you carry, you carry alone, and you take it with you when you die.</p>
+  <p>奉道 (fèng dào) is not a religious vow — there is no temple, no ordained ceremony. It is a declaration made within jianghu, witnessed by the martial arts world. Not everyone has the right to make it: only a practitioner of sufficient standing is considered eligible.</p>
+  <p>The specific trigger for Gong Er's vow matters. When she first moves against Ma San after her father's murder, he stops her with a point of ritual law: she is betrothed. Under the <strong>礼法</strong> (lǐfǎ) — the ritual codes that governed traditional Chinese social life with the force of law — a woman who has been promised in marriage is no longer fully a member of her birth family. She belongs, in the eyes of custom, to her future husband's house. Ma San tells her directly: she has no right to avenge her father, because she is no longer truly a Gong.</p>
+  <p>Her response is to break off the engagement, cut her hair, and take the 奉道 (fèng dào) vow — permanently anchoring herself to her father's name. She is warned before she does it:</p>
+<div class="pull-quote">
+  <span style="font-size:0.95em; color:var(--gold); display:block; margin-bottom:0.6rem;">奉了道，你这一辈子就不能嫁人，不能传艺，更不能有后。那可是回不了头的。</span>
+  "Once you take this vow, you can never marry, never pass on your art, never have children. There is no going back."<br>
+  <span style="font-size:0.85rem; color:var(--ink-light); font-style:normal;">— the Gong family retainer, to Gong Er, <em>The Grandmaster</em></span>
+</div>
+  <p>She understands the price. She pays it. This is why the extinction of the Gong family's 64 Hands is not an accident of history — it is a deliberate choice, the cost of winning the right to be, unambiguously, her father's heir.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-label">Part Five</p>
+  <h2 class="section-title">老猿挂印回首望 — The Move That Connects Father and Daughter</h2>
+
+  <p><strong>老猿挂印回首望</strong> is a technique from the Gong family's <em>六十四手</em> (Sixty-Four Hands) — the highest set of Baguazhang moves in their lineage, never formally passed to Ma San. The name translates as "Old ape hangs the seal, turns to look back." It has two parts: 老猿挂印 (the ape hanging the seal) is a devastating knee strike to the chest — a lethal blow. The second half, 回首望 (turning to look back), is a sudden pivot that sends the opponent away behind you. Gong Yutian insists the technique's meaning lives entirely in the second part: <em>老猿挂印回首望，关隘不在挂印，而是回头</em> — "The key is not in the strike. The key is in turning back."</p>
+
+  <p>When Gong Yutian uses this move against Ma San before his death, he does not deploy it at full force. He neutralises Ma San's attack and sends him away. He could have broken his arm. He could have killed him. He does not. The killing blow — the 挂印 (hanging the seal) — is withheld; only the 回首望 (turning to look back) is completed. The move is a lesson delivered in martial form: there is still a path back. He is offering his disciple a last chance to step away from collaboration, from betrayal, from the road he is on.</p>
+
+  <p>Ma San does not turn back. He kills Gong Yutian.</p>
+
+  <p>Years later, in a snow-covered Manchurian train station under Japanese occupation, Gong Er confronts Ma San and uses the Gong family's 64 Hands — including 叶底藏花 ("flowers hidden beneath leaves" — striking where least expected) to counter his 老猿挂印 (hanging the seal). Where her father had withheld the 挂印 (hanging the seal) and completed only the 回首望 (turning to look back), Gong Er's 回首望 (turning to look back) is now the instrument of defeat: the pivot and throw that sends Ma San crashing into the train. She also breaks his meridians, permanently ending his ability to practice martial arts. The vengeance is exact: not death, but the permanent destruction of the thing he valued most.</p>
+
+  <p>Ma San's final words show that he understood his teacher's lesson only at the moment of its completion, too late:</p>
+<div class="pull-quote">
+  <span style="font-size:0.95em; color:var(--gold); display:block; margin-bottom:0.6rem;">老爷子说"老猿挂印"的关隘是"回头"，当时我没听懂，以为是他慢了。宫家的东西，我还了。</span>
+  "The Old Master said the key to 老猿挂印 (hanging the seal) is turning back. I didn't understand at the time — I thought he had simply slowed down. What belongs to the Gong family — I return it."<br>
+  <span style="font-size:0.85rem; color:var(--ink-light); font-style:normal;">— Ma San, to Gong Er, <em>The Grandmaster</em></span>
+</div>
+  <p>He had mistaken his teacher's deliberate restraint for physical decline. Gong Er's reply allows him nothing:</p>
+<div class="pull-quote">
+  <span style="font-size:0.95em; color:var(--gold); display:block; margin-bottom:0.6rem;">话得说清楚，宫家的东西是我自己取回来的。</span>
+  "Let's be clear. I took back what belongs to the Gong family myself."<br>
+  <span style="font-size:0.85rem; color:var(--ink-light); font-style:normal;">— Gong Er, to Ma San, <em>The Grandmaster</em></span>
+</div>
+  <p>The Gong name was never his to return.</p>
+
+  <p>老猿挂印回首望 is the thread that connects father and daughter. Gong Yutian encoded a moral choice inside a martial move and offered it to his disciple. Ma San refused it. Gong Er — wielding the same family art that Ma San was never trusted with — used it to close that door permanently. The move is about second chances. The tragedy is that Ma San understood the offer only once it had expired.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="pull-quote">
+  <span style="font-size:0.95em; color:var(--gold); display:block; margin-bottom:0.6rem;">我爹常说习武之人有三个阶段：见自己，见天地，见众生。我见过自己，也算见过天地，可惜见不到众生。这条路，我没走完，希望你能把它走下去。</span>
+  "My father often said that martial artists go through three stages: seeing yourself, seeing the world, seeing all beings. I have seen myself, and I suppose I have seen the world, but I could never see all beings. I did not finish this path. I hope you will walk it to the end."<br>
+  <span style="font-size:0.85rem; color:var(--ink-light); font-style:normal;">— Gong Er, <em>The Grandmaster</em></span>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-label">Part Six</p>
+  <h2 class="section-title">Themes and Scenes to Watch For</h2>
+
+  <ul class="watch-list">
+    <li><strong>Time and loss</strong> — The film's Chinese title, 一代宗師, means "Grandmaster of a Generation." That phrase is elegiac at its core: greatness defined by its historical moment, which has passed. Notice how characters speak of a "golden age" — they are mourning it in real time even as they live it.</li>
+    <li><strong>What gets passed on, and what is lost forever</strong> — Every character in the film is wrestling with the question of legacy. Ip Man succeeds in passing on Wing Chun; Gong Er deliberately extinguishes her family's art to preserve its honour. Watch who takes students and who refuses to — this is the film's deepest moral question.</li>
+    <li><strong>Unfulfilled love as a form of honour</strong> — The connection between Ip Man and Gong Er is felt but never acted upon. Both are bound by loyalty — he to his wife, she to her vows. Wong Kar-wai has built his career on this kind of restrained longing. This is not Western courtly love — it is something specifically Chinese about how honour and feeling are permitted to coexist. Watch for the coat button near the film's end: Ip Man once bought a heavy winter coat intending to travel north to visit Gong Er, a journey that poverty, and then history, made impossible. The coat had to be pawned. He kept one button. When he finally gives it to her, it is the only physical form his feelings ever take — a small disc of cloth and metal standing in for a coat, a journey, and a life unlived. Listen for the moment Gong Er gives the feeling its only direct words:
+<div class="pull-quote">
+  <span style="font-size:0.95em; color:var(--gold); display:block; margin-bottom:0.6rem;">说句真心话，我心里有过你。喜欢人不犯法，可我也只能到喜欢为止了。</span>
+  "To tell you the truth, I've had you in my heart. There's no law against loving someone. But loving you is as far as I can go."<br>
+  <span style="font-size:0.85rem; color:var(--ink-light); font-style:normal;">— Gong Er, <em>The Grandmaster</em></span>
+</div>
+</li>
+    <li><strong>Rain, gold, and snow — the film's visual language</strong> — The opening fight in the rain is not just spectacle; rain in Chinese visual tradition is associated with melancholy and memory. The golden light that suffuses the 1930s Foshan sequences is Wong's visual shorthand for a world that glows with the warmth of what is about to be destroyed. The snow-swept Manchurian sequences are bleakness incarnate — the North, conquered and frozen.</li>
+    <li><strong>The body as philosophy</strong> — In Chinese martial tradition, how you move expresses how you think. Pay attention to the contrasts: Ip Man's linear, direct strikes versus Gong Er's circular evasions; the explosive contact of Bajiquan versus the spiralling flow of Baguazhang. These are not just fighting differences — they are worldviews made physical.</li>
+    <li><strong>Dignity in defeat and in poverty</strong> — Watch how characters carry themselves after they have lost everything. Ip Man's years of near-starvation during the occupation are shown without self-pity. Masters who were once wealthy now teach in cramped rooms with absolute equanimity. This composure is a moral statement: the art is not diminished by the circumstances of its practitioner.</li>
+    <li><strong>The South-North reunion that never comes</strong> — The film's central narrative promise — that Ip Man will unite the Southern and Northern martial arts worlds — is never fulfilled, because history destroys the world in which that reunion was possible. The film is about a reconciliation that history made impossible, and the people who carried the dream of it into exile.</li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="divider">· · ·</div>
+
+<div class="pull-quote">
+  <span style="font-size:0.95em; color:var(--gold); display:block; margin-bottom:0.6rem;">往后的路，你是一步一擂台。希望你像我一样，凭一口气点一盏灯。要知道，念念不忘，必有回响。有灯，就有人。</span>
+  "From here on, every step is a challenge. I hope you, like me, will keep a single breath to light a lamp. Know this: hold something in your heart without forgetting, and it will echo back. Where there is a lamp, there is someone."<br>
+  <span style="font-size:0.85rem; color:var(--ink-light); font-style:normal;">— Gong Yutian, <em>The Grandmaster</em></span>
+</div>
+
+<footer class="footer">
+  <p>This is <em>The Scenes Explained</em>, the spoiler-bearing companion to the spoiler-free <em>Background Guide</em> — together a two-part cultural companion to <em>The Grandmaster</em> (一代宗師, 2013).</p>
+  <p style="margin-top:0.4rem;">Directed by Wong Kar-wai · Starring Tony Leung Chiu-wai and Zhang Ziyi</p>
+  <p style="margin-top:0.4rem;">Cinematography by Philippe Le Sourd · Action choreography by Yuen Woo-ping</p>
+</footer>
+
+</body>
+</html>
