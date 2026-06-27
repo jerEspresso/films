@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Film Companions — A Cultural Companion to Cinema</title>
-<meta name="description" content="Cultural companions to film: background guides and scene-by-scene close readings.">
+<title>The Grandmaster — A Cultural Companion</title>
+<meta name="description" content="A cultural companion to Wong Kar-wai's The Grandmaster (2013): background guide and scene-by-scene explanations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
 <style>
@@ -28,7 +28,7 @@
     font-family: 'Lora', Georgia, serif;
     font-size: 16.5px;
     line-height: 1.78;
-    max-width: 820px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 3rem 2.5rem 5rem;
   }
@@ -67,7 +67,14 @@
     font-style: italic;
     font-weight: 400;
     color: var(--ink-light);
+    margin-bottom: 1.4rem;
     letter-spacing: 0.03em;
+  }
+
+  .header-meta {
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    letter-spacing: 0.05em;
   }
 
   .header-rule {
@@ -99,90 +106,85 @@
     text-align: center;
     font-size: 1.05rem;
     color: var(--ink-mid);
-    max-width: 40rem;
-    margin: 2.4rem auto 1rem;
+    max-width: 38rem;
+    margin: 2.4rem auto 2.8rem;
   }
 
-  /* ── SECTION LABEL ── */
-  .section-label {
-    text-align: center;
-    font-size: 11px;
-    font-style: italic;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin: 2.6rem 0 1.4rem;
-  }
-
-  /* ── FILM CARDS ── */
-  .films {
+  /* ── CARDS ── */
+  .cards {
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 1.5rem;
   }
 
-  .film {
+  .card {
     display: block;
     text-decoration: none;
     color: inherit;
     background: var(--cream-dark);
     border: 1px solid var(--rule);
-    border-top: 4px solid var(--red);
-    padding: 1.8rem 2rem;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-top-color 0.18s ease;
+    border-left: 4px solid var(--gold);
+    padding: 1.6rem 1.8rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-left-color 0.18s ease;
   }
-  .film:hover,
-  .film:focus-visible {
+  .card:hover,
+  .card:focus-visible {
     transform: translateY(-3px);
-    box-shadow: 0 9px 24px rgba(30, 22, 10, 0.18);
-    border-top-color: var(--gold);
+    box-shadow: 0 8px 22px rgba(30, 22, 10, 0.16);
+    border-left-color: var(--red);
     outline: none;
   }
 
-  .film-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.12;
-    color: var(--ink);
-    margin-bottom: 0.35rem;
-  }
-
-  .film-meta {
-    font-size: 0.9rem;
+  .card-eyebrow {
+    font-size: 11px;
     font-style: italic;
-    color: var(--ink-light);
-    letter-spacing: 0.02em;
-    margin-bottom: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
   }
 
-  .film-desc {
-    font-size: 0.98rem;
+  .card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .card-desc {
+    font-size: 0.97rem;
     color: var(--ink-mid);
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.9rem;
   }
 
-  .film-foot {
+  .card-foot {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    border-top: 1px solid var(--rule);
-    padding-top: 0.9rem;
   }
 
-  .film-count {
-    font-size: 11px;
+  .tag {
+    display: inline-block;
+    font-family: 'Lora', serif;
+    font-size: 10.5px;
+    font-style: normal;
     letter-spacing: 0.13em;
     text-transform: uppercase;
-    color: var(--gold);
+    padding: 0.28rem 0.7rem;
+    border: 1px solid currentColor;
+    border-radius: 2px;
   }
+  .tag-safe { color: var(--gold); }
+  .tag-spoiler { color: var(--red); }
 
-  .film-open {
+  .card-arrow {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--red);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
   }
 
   /* ── FOOTER ── */
@@ -199,41 +201,64 @@
   @media (max-width: 600px) {
     body { padding: 2rem 1.4rem 4rem; }
     .header-title { font-size: 2.7rem; }
-    .film-title { font-size: 1.6rem; }
   }
+
+  /* ── BACK LINK ── */
+  .back-link {
+    display: inline-block;
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .back-link:hover { color: var(--red); }
 </style>
 </head>
 <body>
 
+  <a class="back-link" href="../index.html">&larr; All Films</a>
+
   <header class="header">
     <p class="header-eyebrow">A Cultural Companion</p>
-    <h1 class="header-title">Film Companions</h1>
-    <p class="header-subtitle">Guides &amp; close readings of cinema</p>
+    <h1 class="header-title">The Grandmaster</h1>
+    <p class="header-subtitle">一代宗師 &nbsp;·&nbsp; Yi Dai Zong Shi</p>
+    <p class="header-meta">Directed by Wong Kar-wai &nbsp;·&nbsp; 2013</p>
     <div class="header-rule">
       <span class="seal">✦</span>
     </div>
   </header>
 
-  <p class="lead">A growing library of companions to films worth thinking about — the history and ideas behind each work, and a close reading of how it unfolds on screen.</p>
+  <p class="lead">A two-volume companion to Wong Kar-wai's epic of Chinese martial arts — the history and philosophy behind the film, and a close reading of its key scenes.</p>
 
-  <p class="section-label">The Collection</p>
+  <nav class="cards">
 
-  <div class="films">
-
-    <a class="film" href="the-grandmaster/index.html">
-      <h2 class="film-title">The Grandmaster</h2>
-      <p class="film-meta">一代宗師 · Yi Dai Zong Shi &nbsp;·&nbsp; Directed by Wong Kar-wai &nbsp;·&nbsp; 2013</p>
-      <p class="film-desc">Wong Kar-wai's elegiac epic of Chinese martial arts and the men and women who carried them through a vanishing era. A two-volume companion: a spoiler-free background guide and a scene-by-scene reading.</p>
-      <div class="film-foot">
-        <span class="film-count">Two-Volume Companion</span>
-        <span class="film-open">Open &rarr;</span>
+    <a class="card" href="the-grandmaster-background.html">
+      <p class="card-eyebrow">Volume One · Background</p>
+      <h2 class="card-title">The Background Guide</h2>
+      <p class="card-desc">The world the film lives in — the martial arts lineages, the era, and the cultural ideas that give every scene its weight. Read this first.</p>
+      <div class="card-foot">
+        <span class="tag tag-safe">Spoiler-Free</span>
+        <span class="card-arrow">Read &rarr;</span>
       </div>
     </a>
 
-  </div>
+    <a class="card" href="the-grandmaster-scenes-explained.html">
+      <p class="card-eyebrow">Volume Two · Scenes Explained</p>
+      <h2 class="card-title">The Scenes Explained</h2>
+      <p class="card-desc">A scene-by-scene reading of the film's pivotal moments, characters, and choices — what happens, and why it matters.</p>
+      <div class="card-foot">
+        <span class="tag tag-spoiler">Contains Spoilers</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+
+  </nav>
 
   <footer class="footer">
-    <p>✦ &nbsp; More films to come &nbsp; ✦</p>
+    <p>✦ &nbsp; Best read after watching the film &nbsp; ✦</p>
   </footer>
 
 </body>
